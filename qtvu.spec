@@ -1,13 +1,17 @@
+%define		_beta		beta2
+%define		_release	0.1
+
 Summary:	Image viewer for The X Window System
 Summary(pl):	Przegl±darka do plików graficznych
 Name:		qtvu
-Version:	0.3.18
-Release:	1d
+Version:	0.3.21
+Release:	0.%{_beta}.%{_release}
 License:	GPL
 Group:		X11/Applications/Graphics
-Source0:	ftp://ftp.troll.no/contrib/%{name}-%{version}.tar.gz
-URL:		http://www.softarc.com/~msharkey/QtVu/
-BuildRequires:	qt-devel
+Source0:	http://download.sourceforge.net/qtvu/%{name}-%{version}%{_beta}.tar.gz
+Patch0:		%{name}-qt3.patch
+URL:		http://qtvu.sourceforge.net/
+BuildRequires:	qt-devel >= 3.0.5
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -22,13 +26,15 @@ QtVu jest przegl±dark± plików graficznych pracuj±c± w ¶rodowisku X
 Window. Program ten wzorowany jest na ACDSee firmy ACD Systems.
 
 %prep
-%setup  -q
+%setup -q -n %{name}-%{version}%{_beta}
+%patch0 -p1
 
 %build
 #(autoheader/autoconf/automake)
 #CFLAGS="%{rpmcflags}" LDFLAGS="%{rpmldflags}" \
 #./configure \
 #	--prefix=/usr
+cd src
 %{__make} \
 	INCPATH="-I%{_includedir}/qt" \
 	QTDIR="%{_prefix}" \
@@ -38,10 +44,12 @@ Window. Program ten wzorowany jest na ACDSee firmy ACD Systems.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-gzip -9nf README ChangeLog
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc README ChangeLog
