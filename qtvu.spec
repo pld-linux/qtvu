@@ -5,8 +5,6 @@ Version:	0.3.18
 Release:	1d
 License:	GPL
 Group:		X11/Applications/Graphics
-Group(de):	X11/Applikationen/Grafik
-Group(pl):	X11/Aplikacje/Grafika
 Source0:	ftp://ftp.troll.no/contrib/%{name}-%{version}.tar.gz
 URL:		http://www.softarc.com/~msharkey/QtVu/
 BuildRequires:	qt-devel
