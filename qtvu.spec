@@ -5,6 +5,7 @@ Version:	0.3.18
 Release:	1d
 License:	GPL
 Group:		X11/Applications/Graphics
+Group(de):	X11/Applikationen/Grafik
 Group(pl):	X11/Aplikacje/Grafika
 Source0:	ftp://ftp.troll.no/contrib/%{name}-%{version}.tar.gz
 URL:		http://www.softarc.com/~msharkey/QtVu/
@@ -28,20 +29,19 @@ Window. Program ten wzorowany jest na ACDSee firmy ACD Systems.
 
 %build
 #(autoheader/autoconf/automake)
-#CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s" \
+#CFLAGS="%{rpmcflags}" LDFLAGS="%{rpmldflags}" \
 #./configure \
 #	--prefix=/usr
 %{__make} \
 	INCPATH="-I%{_includedir}/X11/qt" \
 	QTDIR="%{_prefix}" \
-	CFLAGS="-Wall $RPM_OPT_FLAGS" \
-	CXXFLAGS="-Wall $RPM_OPT_FLAGS"
+	CFLAGS="-Wall %{rpmcflags}" \
+	CXXFLAGS="-Wall %{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-gzip -9nf $RPM_BUILD_ROOT{%{_infodir}/*.info*,%{_mandir}/man*/* \
-	README ChangeLog 
+gzip -9nf README ChangeLog 
 
 %clean
 rm -rf $RPM_BUILD_ROOT
