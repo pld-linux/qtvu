@@ -38,7 +38,7 @@ Window. Program ten wzorowany jest na ACDSee firmy ACD Systems.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-gzip -9nf README ChangeLog 
+gzip -9nf README ChangeLog
 
 %clean
 rm -rf $RPM_BUILD_ROOT
