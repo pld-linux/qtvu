@@ -1,0 +1,11 @@
+--- ./src/main.cpp.org	Mon Jun 21 03:46:55 1999
++++ ./src/main.cpp	Sun Sep  1 16:55:36 2002
+@@ -11,7 +11,7 @@
+ 
+ #include <qapplication.h>
+ #include <qjpegio.h>
+-#include <qimageio.h>
++#include <qimage.h>
+ #include <qpixmap.h>
+ #include <qfileinfo.h>
+ #include <qobject.h>
