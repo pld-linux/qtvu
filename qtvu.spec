@@ -1,11 +1,11 @@
 %define		_beta		beta2
-%define		_release	0.1
 
 Summary:	Image viewer for The X Window System
 Summary(pl):	Przegl±darka do plików graficznych
 Name:		qtvu
 Version:	0.3.21
-Release:	0.%{_beta}.%{_release}
+%define	rel	0.1
+Release:	0.%{_beta}.%{rel}
 License:	GPL
 Group:		X11/Applications/Graphics
 Source0:	http://download.sourceforge.net/qtvu/%{name}-%{version}%{_beta}.tar.gz
