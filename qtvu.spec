@@ -28,7 +28,7 @@ Program ten wzorowany jest na ACDSee firmy ACD Systems.
 #CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s" \
 #./configure \
 #	--prefix=/usr
-make \
+%{__make} \
 	INCPATH="-I/usr/X11R6/include/X11/qt" \
 	QTDIR="/usr/X11R6" \
 	CFLAGS="-Wall $RPM_OPT_FLAGS" \
