@@ -9,8 +9,7 @@ Group(de):	X11/Applikationen/Grafik
 Group(pl):	X11/Aplikacje/Grafika
 Source0:	ftp://ftp.troll.no/contrib/%{name}-%{version}.tar.gz
 URL:		http://www.softarc.com/~msharkey/QtVu/
-Requires:	qt
-Requires:	XFree86-libs
+BuildRequires:	qt-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -33,7 +32,7 @@ Window. Program ten wzorowany jest na ACDSee firmy ACD Systems.
 #./configure \
 #	--prefix=/usr
 %{__make} \
-	INCPATH="-I%{_includedir}/X11/qt" \
+	INCPATH="-I%{_includedir}/qt" \
 	QTDIR="%{_prefix}" \
 	CFLAGS="-Wall %{rpmcflags}" \
 	CXXFLAGS="-Wall %{rpmcflags}"
