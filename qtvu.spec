@@ -54,8 +54,3 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-
-%changelog
-* Wed Feb 10 1999 Artur Frysiak <wiget@usa.net>
- [0.3.18-1d]
-- initial release for PLD
