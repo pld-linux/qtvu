@@ -10,7 +10,7 @@ Source:      	ftp://ftp.troll.no/contrib/%{name}-%{version}.tar.gz
 URL:		http://www.softarc.com/~msharkey/QtVu/
 Requires:	qt
 Requires:	XFree86-libs
-BuildRoot:   	/tmp/%{name}-%{version}-root
+BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
 QtVu, pronounced CuteView, is an image viewer for The X Window System.
