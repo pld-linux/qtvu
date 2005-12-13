@@ -8,7 +8,7 @@ Version:	0.3.21
 Release:	0.%{_beta}.%{rel}
 License:	GPL
 Group:		X11/Applications/Graphics
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}%{_beta}.tar.gz
+Source0:	http://dl.sourceforge.net/qtvu/%{name}-%{version}%{_beta}.tar.gz
 # Source0-md5:	e507a0d2786da79cdfa245fa28e6c5fa
 Patch0:		%{name}-qt3.patch
 URL:		http://qtvu.sourceforge.net/
