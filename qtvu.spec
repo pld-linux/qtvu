@@ -1,7 +1,7 @@
 %define		_beta		beta2
 
 Summary:	Image viewer for The X Window System
-Summary(pl):	Przegl±darka do plików graficznych
+Summary(pl.UTF-8):   PrzeglÄ…darka do plikÃ³w graficznych
 Name:		qtvu
 Version:	0.3.21
 %define	rel	0.1
@@ -20,8 +20,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 QtVu, pronounced CuteView, is an image viewer for The X Window System.
 QtVu is heavily inspired by ACD Systems' excellent ACDSee.
 
-%description -l pl
-QtVu jest przegl±dark± plików graficznych pracuj±c± w ¶rodowisku X
+%description -l pl.UTF-8
+QtVu jest przeglÄ…darkÄ… plikÃ³w graficznych pracujÄ…cÄ… w Å›rodowisku X
 Window. Program ten wzorowany jest na ACDSee firmy ACD Systems.
 
 %prep
