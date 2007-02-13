@@ -1,7 +1,7 @@
 %define		_beta		beta2
 
 Summary:	Image viewer for The X Window System
-Summary(pl.UTF-8):   Przeglądarka do plików graficznych
+Summary(pl.UTF-8):	Przeglądarka do plików graficznych
 Name:		qtvu
 Version:	0.3.21
 %define	rel	0.1
