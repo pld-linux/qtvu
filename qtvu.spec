@@ -26,7 +26,7 @@ Window. Program ten wzorowany jest na ACDSee firmy ACD Systems.
 
 %prep
 %setup -q -n %{name}-%{version}%{_beta}
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 #(autoheader/autoconf/automake)
